@@ -1,0 +1,9 @@
+{
+    "directory": "public/javascripts",
+    "interactive": false,
+    "storage": {
+        "packages": ".bower-cache",
+        "registry": ".bower-registry"
+    },
+    "tmp": ".bower-tmp"
+}
