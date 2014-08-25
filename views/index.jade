@@ -1,0 +1,36 @@
+extends layout
+
+block content
+    body(data-ng-cloak="")
+        div(class="navbar navbar-fixed-top",data-ng-controller="NavbarController")
+            div(class="navbar-inner")
+                div(class="container")
+                    a(class="brand ",href="#/")
+                        img(src="Images/people.png" ,alt="logo")
+                        {{ appTitle }}
+                    ul(class="nav nav-pills navBarPadding")
+                        li(data-ng-class="{'active':highlight('/customers')}")
+                            a(href="#/customers") Customers
+                        li(data-ng-class="{'active':highlight('/orders')}")
+                            a(href="#/orders") Orders
+                        li(data-ng-class="{'active':highlight('/about')}")
+                            a(href="#/about") About
+
+    div(data-ng-view="" ,id="ng-view",class="slide-animation")
+
+    div(id="footer")
+        div(class="navbar navbar-fixed-bottom")
+            div(class="navbar-inner footer")
+                div(class="container")
+                    footer
+                        div(class="row")
+                            div(class="span12")
+                                Created by
+                                a(href="http://twitter.com/DanWahlin",target="_blank") Dan Wahlin
+
+    div(data-wc-overlay="",data-wc-overlay-delay="300")
+        br
+        img(src="images/spinner.gif")
+        nbsp;&nbsp;Loading
+
+
