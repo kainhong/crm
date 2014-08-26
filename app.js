@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 var api = require('./routes/api');
 var DB = require('./accessDB');
 var routes = require('./routes/index');
-
+var env = require('./config/env');
 var app = express();
 
 // view engine setup
@@ -22,9 +22,9 @@ app.use(cookieParser());
 app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
-var conn = 'mongodb://localhost/custmgr';
-DB.startup(conn);
-
+//var conn = 'mongodb://localhost/custmgr';
+//var conn = 'mongodb://JaWKXOJi:HVZAV5o9Z2ko@10.0.31.20/custmgr';
+DB.startup(env.connectionString);
 
 app.use('/', routes);
 
