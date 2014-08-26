@@ -17,10 +17,10 @@ var OrderSchema = new Schema({
     type : String, required: true, trim: true
   },
   price : {
-    type : Number,
+    type : Number
   },
   quantity : {
-    type : Number,
+    type : Number
   }
 });
 
@@ -58,15 +58,15 @@ var CustomerSchema = new Schema({
     type : Number, required: true
   },
   gender : {
-    type : String,
+    type : String
   },
   id : {
     type : Number, required: true, unique: true
   },
   orderCount : {
-    type : Number,
+    type : Number
   },
-  orders: [OrderSchema],
+  orders: [OrderSchema]
 });
 
 CustomerSchema.index({ id: 1, type: 1 }); // schema level
