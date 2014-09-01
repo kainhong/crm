@@ -12,3 +12,5 @@ Load sample data into MongoDB by performing the following steps:
  In the CustomerManager directory execute 'npm install' to start app
 
  In browser navigate to url:http://localhost:3000
+ 
+ reference:https://github.com/DanWahlin/CustomerManager
